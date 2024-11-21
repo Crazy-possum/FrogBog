@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float _speed = 4.0f;
-    [SerializeField] float _jumpForce = 700f;
-    [SerializeField] GameObject _playerCamera;
+    [SerializeField] private float _speed = 4.0f;
+    [SerializeField] private float _jumpForce = 700f;
+    [SerializeField] private GameObject _playerCamera;
+    [SerializeField] private GroundChecker _groundChecker;
 
     private Rigidbody2D _rbody2d;
     private bool _jump;
