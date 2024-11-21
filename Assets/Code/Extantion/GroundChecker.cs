@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-internal class GroundChecker
+internal class GroundChecker : MonoBehaviour 
 {
     public bool IsGrounded;
     private List<GameObject> _floorObjects;
@@ -11,7 +11,7 @@ internal class GroundChecker
         _floorObjects = new List<GameObject>();
     }
 
-    private void OnTriggrtEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag != "Player")
         {
