@@ -13,7 +13,7 @@ internal class GroundChecker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Player")
+        if ((collision.gameObject.tag != "Player")&(collision.gameObject.tag != "Enemy")) 
         {
             _floorObjects.Add(collision.gameObject);
             IsGrounded = true;
