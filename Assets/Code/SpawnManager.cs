@@ -10,9 +10,18 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject _enemyPrefab;
     void Start()
     {
+        
         foreach(TransformSercher tsercher in _spawnZoneList) 
         {
-            SpawnEnemy(tsercher.GetSpawnPosition());
+            tsercher.OnSpawnAction += SpawnEnemy;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        foreach (TransformSercher tsercher in _spawnZoneList)
+        {
+            tsercher.OnSpawnAction -= SpawnEnemy;
         }
     }
 
