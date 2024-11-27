@@ -9,12 +9,11 @@ public class CameraTrigger : MonoBehaviour
 
     public Action OnCameraEnterTrigger { get => _onCameraEnterTrigger; set => _onCameraEnterTrigger = value; }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "MainCamera")
         {
-            OnCameraEnterTrigger.Invoke();
+            OnCameraEnterTrigger?.Invoke();
         }
-        Debug.Log("rgr");
     }
 }

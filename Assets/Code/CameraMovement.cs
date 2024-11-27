@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Transform _cameraTransform;
+    [SerializeField] private Rigidbody2D _rbCamera;
     [SerializeField] private float _speed;
     private Vector2 _startPosition;
 
@@ -15,6 +16,6 @@ public class CameraMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        _cameraTransform.Translate(Vector2.right * _speed * Time.deltaTime);
+        _rbCamera.velocity = new Vector2(_speed, _rbCamera.velocity.y);
     }
 }
