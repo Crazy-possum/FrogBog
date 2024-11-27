@@ -7,7 +7,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private Transform _cameraTransform;
     [SerializeField] private Rigidbody2D _rbCamera;
     [SerializeField] private float _speed;
-    private Vector2 _startPosition;
+    private Vector3 _startPosition;
 
     void Start()
     {
@@ -18,4 +18,10 @@ public class CameraMovement : MonoBehaviour
     {
         _rbCamera.velocity = new Vector2(_speed, _rbCamera.velocity.y);
     }
+
+    public void ToStartPosition()
+    {
+        _cameraTransform.position = _startPosition;
+    }
 }
+
