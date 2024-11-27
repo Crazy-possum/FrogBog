@@ -32,6 +32,8 @@ public class StageController : MonoBehaviour
     {
         _cameraTrigger.OnCameraEnterTrigger += ChangeToSecondStage;
         _playerTrigger.OnPlayerEnterTrigger += ChangeToThirdStage;
+
+        OnChangeStage?.Invoke(1);
     }
 
     private void OnDestroy()
@@ -43,6 +45,7 @@ public class StageController : MonoBehaviour
     private void ChangeToSecondStage()
     {
         OnChangeStage?.Invoke(2);
+
         _camera.SetActive(false);
         _player.SetActive(true);
     }
@@ -50,6 +53,7 @@ public class StageController : MonoBehaviour
     private void ChangeToThirdStage()
     {
         OnChangeStage?.Invoke(3);
+
         _cameraMovement.ToStartPosition();
         _player.SetActive(false);
         _camera.SetActive(true);

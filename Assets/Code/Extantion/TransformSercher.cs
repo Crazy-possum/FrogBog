@@ -50,6 +50,6 @@ public class TransformSercher : MonoBehaviour
 
     private void SpawnAction()
     {
-        OnSpawnAction.Invoke(GetSpawnPosition());
+        OnSpawnAction?.Invoke(GetSpawnPosition());
     }
 }

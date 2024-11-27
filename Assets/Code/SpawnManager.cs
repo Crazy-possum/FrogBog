@@ -8,20 +8,28 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<TransformSercher> _spawnZoneList;
     [SerializeField] private Transform _rootTransform;
     [SerializeField] private GameObject _enemyPrefab;
+
     void Start()
     {
-        
-        foreach(TransformSercher tsercher in _spawnZoneList) 
-        {
-            tsercher.OnSpawnAction += SpawnEnemy;
-        }
+        StageController.Instance.OnChangeStage += ChangeStage;
+        ChangeStage(1);
     }
 
-    private void OnDestroy()
+    private void ChangeStage(int stageIndex)
     {
-        foreach (TransformSercher tsercher in _spawnZoneList)
+        if (stageIndex == 1)
         {
-            tsercher.OnSpawnAction -= SpawnEnemy;
+            foreach (TransformSercher tsercher in _spawnZoneList)
+            {
+                tsercher.OnSpawnAction += SpawnEnemy;
+            }
+        }
+        else if (stageIndex == 2)
+        {
+            foreach (TransformSercher tsercher in _spawnZoneList)
+            {
+                tsercher.OnSpawnAction -= SpawnEnemy;
+            }
         }
     }
 
