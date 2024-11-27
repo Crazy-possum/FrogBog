@@ -169,6 +169,17 @@ Transform:
   - {fileID: 2008912534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &452333575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7471698219212256333, guid: 9363d1eb42ee21242999fe13f2acd4aa, type: 3}
+  m_PrefabInstance: {fileID: 6812293519818451487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182eae90e37b3d24c8c5662e24d0e5e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &471323049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1780,6 +1791,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1853113882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853113884}
+  - component: {fileID: 1853113883}
+  m_Layer: 0
+  m_Name: StageController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1853113883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853113882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93310f8d223b6344fae64826a616d5e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trigger: {fileID: 452333575}
+  _camera: {fileID: 1609478098}
+  _player: {fileID: 2083391369}
+--- !u!4 &1853113884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853113882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.876244, y: -0.007314384, z: -0.004908205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989040886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,6 +2698,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2083391369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2741046124803665598, guid: 8650d49b64f69314796bd341c5722fd6, type: 3}
+  m_PrefabInstance: {fileID: 2011181093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2562883647081881946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2731,6 +2794,10 @@ PrefabInstance:
     - target: {fileID: 2683960049593733687, guid: 9363d1eb42ee21242999fe13f2acd4aa, type: 3}
       propertyPath: m_Name
       value: CameraTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840719529450812081, guid: 9363d1eb42ee21242999fe13f2acd4aa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10.963
       objectReference: {fileID: 0}
     - target: {fileID: 7840719529450812081, guid: 9363d1eb42ee21242999fe13f2acd4aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2858,3 +2925,4 @@ SceneRoots:
   - {fileID: 2013556036}
   - {fileID: 1989040888}
   - {fileID: 6812293519818451487}
+  - {fileID: 1853113884}
