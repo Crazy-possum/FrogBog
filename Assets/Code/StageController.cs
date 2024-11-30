@@ -32,8 +32,6 @@ public class StageController : MonoBehaviour
     {
         _cameraTrigger.OnCameraEnterTrigger += ChangeToSecondStage;
         _playerTrigger.OnPlayerEnterTrigger += ChangeToThirdStage;
-
-        OnChangeStage?.Invoke(1);
     }
 
     private void OnDestroy()
