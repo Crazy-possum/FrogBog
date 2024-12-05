@@ -35,6 +35,11 @@ public class SpawnManager : MonoBehaviour
 
     private void SpawnEnemy(Vector2 position)
     {
+        GameObject gObject = 
         GameObject.Instantiate(_enemyPrefab,position,Quaternion.identity,_rootTransform);
+        Enemy enemy =
+        gObject.GetComponent<Enemy>();
+
+        EnemyKiller.Instance.AddEnemy(enemy);
     }
 }

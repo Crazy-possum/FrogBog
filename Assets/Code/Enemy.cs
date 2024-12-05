@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer _enemySprite;
+    [SerializeField] private GameObject _enemyAlive;
+    [SerializeField] private GameObject _enemyKilled;
+    private bool _isDead;
+
+    public bool IsDead { get => _isDead; set => _isDead = value; }
 
     private void Start()
     {
@@ -15,15 +19,30 @@ public class Enemy : MonoBehaviour
         StageController.Instance.OnChangeStage -= ChangeEnemyState;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            IsDead = true;
+        }
+    }
+
     private void ChangeEnemyState(int stageInt)
     {
         if (stageInt == 2)
         {
-            _enemySprite.enabled = false;
+            _enemyAlive.SetActive(false);
         }
         else if (stageInt == 3)
         {
-            _enemySprite.enabled = true;
+            if (IsDead)
+            {
+                _enemyKilled.SetActive(true);
+            }
+            else
+            {
+                _enemyAlive.SetActive(true);
+            }
         }
     }
 }

@@ -12,6 +12,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private GameObject _camera;
     [SerializeField] private GameObject _player;
     private Action<int> _onChangeStage;
+    private int _currentStage;
 
     public static StageController Instance { get => _instance; set => _instance = value; }
     public Action<int> OnChangeStage { get => _onChangeStage; set => _onChangeStage = value; }
@@ -30,20 +31,34 @@ public class StageController : MonoBehaviour
 
     void Start()
     {
-        _cameraTrigger.OnCameraEnterTrigger += ChangeToSecondStage;
+        _currentStage = 0;
+        _cameraTrigger.OnCameraEnterTrigger += SelectCameraStage;
         _playerTrigger.OnPlayerEnterTrigger += ChangeToThirdStage;
     }
 
     private void OnDestroy()
     {
-        _cameraTrigger.OnCameraEnterTrigger -= ChangeToSecondStage;
+        _cameraTrigger.OnCameraEnterTrigger -= SelectCameraStage;
         _playerTrigger.OnPlayerEnterTrigger -= ChangeToThirdStage;
+    }
+
+    private void SelectCameraStage()
+    {
+        if(_currentStage == 3)
+        {
+            ChangeToForthStage();
+        }
+        else
+        {
+            ChangeToSecondStage();
+        }
     }
 
     private void ChangeToSecondStage()
     {
         OnChangeStage?.Invoke(2);
 
+        _currentStage = 2;
         _camera.SetActive(false);
         _player.SetActive(true);
     }
@@ -52,8 +67,16 @@ public class StageController : MonoBehaviour
     {
         OnChangeStage?.Invoke(3);
 
+        _currentStage = 3;
         _cameraMovement.ToStartPosition();
         _player.SetActive(false);
         _camera.SetActive(true);
+    }
+
+    private void ChangeToForthStage()
+    {
+        OnChangeStage?.Invoke(4);
+
+        _currentStage = 4;
     }
 }
