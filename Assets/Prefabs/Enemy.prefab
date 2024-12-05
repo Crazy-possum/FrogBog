@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4258816855983391767}
   - component: {fileID: 7605265554592329713}
+  - component: {fileID: 3965054129528250325}
   m_Layer: 0
   m_Name: Kill
   m_TagString: Untagged
@@ -84,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &3965054129528250325
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616773433890394728}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: fdb4fd91e67cd5143bc40a853cf1b638, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: fdb4fd91e67cd5143bc40a853cf1b638, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8041653253073711180
 GameObject:
   m_ObjectHideFlags: 0

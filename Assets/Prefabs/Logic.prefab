@@ -90,6 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1994008035213531442}
   - component: {fileID: 9078031230380033987}
+  - component: {fileID: 5437077692580583788}
   m_Layer: 0
   m_Name: EndGame
   m_TagString: Untagged
@@ -127,6 +128,18 @@ MonoBehaviour:
   _mainPanel: {fileID: 0}
   _losePanel: {fileID: 0}
   _winPanel: {fileID: 0}
+--- !u!114 &5437077692580583788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3747131423352692119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee26d793a45aa64ba8c274e91c37740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5632596846824833242
 GameObject:
   m_ObjectHideFlags: 0
