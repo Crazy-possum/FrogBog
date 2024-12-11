@@ -22,6 +22,12 @@ public class MusicSaver : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Destroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "3")
@@ -32,10 +38,5 @@ public class MusicSaver : MonoBehaviour
         {
             _bgMusic.mute = false;
         }
-    }
-
-    private void Destroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
