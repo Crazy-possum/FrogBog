@@ -22,7 +22,7 @@ public class MusicSaver : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "3")
         {
@@ -34,7 +34,7 @@ public class MusicSaver : MonoBehaviour
         }
     }
 
-    void Destroy()
+    private void Destroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
