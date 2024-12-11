@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelSelectorButton : MonoBehaviour
-    //Повесить на префаб кнопки и поменять на самой сцене индексы для разных кнопок
 {
     public Button LevelSelectButton;
     public int Index;
