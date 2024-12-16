@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4258816855983391767}
   - component: {fileID: 7605265554592329713}
   - component: {fileID: 3965054129528250325}
+  - component: {fileID: 7378346326945859215}
   m_Layer: 0
   m_Name: Kill
   m_TagString: Untagged
@@ -96,12 +97,33 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 7e66f319857582845814aa4ed6e94cbe, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: fdb4fd91e67cd5143bc40a853cf1b638, type: 2}
   - {fileID: 7400000, guid: 7e66f319857582845814aa4ed6e94cbe, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &7378346326945859215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616773433890394728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0defcbb1156fb3444aaf846f704b0c54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationSprites:
+  - {fileID: 21300000, guid: c795ea4cefc3df348b58ba01a9244ccf, type: 3}
+  - {fileID: 21300000, guid: 85afbd0b422218f458e5bee83b2cbf2a, type: 3}
+  - {fileID: 21300000, guid: 8a320b2f519c4dd4fad6d3067249f3f7, type: 3}
+  - {fileID: 21300000, guid: 9ceb14a290a20f24eb95fe61dc1c2879, type: 3}
+  - {fileID: 21300000, guid: 119d7776a0401e344970870c7da015a3, type: 3}
+  - {fileID: 21300000, guid: f29d5c76a68b3a2478a2a594dafd4c84, type: 3}
+  _renderer: {fileID: 7605265554592329713}
+  _isLooped: 0
+  _framesTimeDelta: 0.3
 --- !u!1 &8041653253073711180
 GameObject:
   m_ObjectHideFlags: 0

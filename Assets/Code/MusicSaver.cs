@@ -10,20 +10,20 @@ public class MusicSaver : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        SceneManager.sceneLoaded += OnSceneLoaded;
-
         if (Instance == null)
         {
             _instance = this;
         }
-        else if (Instance == this)
+        else if (Instance != null)
         {
             Destroy(gameObject);
         }
+
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void Destroy()
+    private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
